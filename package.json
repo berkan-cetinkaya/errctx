@@ -1,16 +1,30 @@
 {
   "name": "errctx",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
+  "private": false,
   "type": "module",
   "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
     "test": "vitest"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "errgroup": "^0.1.1",
     "go-like-ctx": "^0.1.1"
   },
   "devDependencies": {
+    "typescript": "^5.9.3",
     "vitest": "^4.0.16"
   }
 }
