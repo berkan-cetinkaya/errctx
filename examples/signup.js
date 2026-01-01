@@ -40,7 +40,7 @@ async function signup(input) {
     console.log("[signup] confirmation sent");
   });
 
-  await g.waitSafe()
+  await g.waitSafe();
 
   if (ectx.isFailed()) {
     return { ok: false, error: ectx.error() };
@@ -128,4 +128,4 @@ var result = await signup({
   name: "Ada Lovelace",
   recaptchaToken: "ok_123",
 });
-console.log(result)
+console.log(result);

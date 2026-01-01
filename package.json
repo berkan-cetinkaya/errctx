@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "example:signup": "node examples/signup.with-lib.js",
-    "example:signup:lib": "node examples/signup.with-lib.js",
+    "example:signup": "node examples/signup.js",
     "example:signup:nolib": "node examples/signup.no-lib.js",
     "prepublishOnly": "npm run build",
     "test": "vitest"

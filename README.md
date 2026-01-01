@@ -51,5 +51,5 @@ Re-exported from the `errgroup` package.
 
 ## Examples
 
-- `examples/signup.with-lib.js`
+- `examples/signup.js`
 - `examples/signup.no-lib.js`
