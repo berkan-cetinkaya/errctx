@@ -43,7 +43,6 @@ Returns an object with:
 - `fail(err)`: record only the first error
 - `error()`: returns the recorded error or null
 - `isFailed()`: true only if `fail()` was called
-- `fail()` does not cancel the context
 
 ### errgroup(ctx, opts)
 
