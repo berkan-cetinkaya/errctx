@@ -48,3 +48,8 @@ Returns an object with:
 ### errgroup(ctx, opts)
 
 Re-exported from the `errgroup` package.
+
+## Examples
+
+- `examples/signup.with-lib.js`
+- `examples/signup.no-lib.js`

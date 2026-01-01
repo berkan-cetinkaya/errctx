@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "example:signup": "node examples/signup.with-lib.js",
+    "example:signup:lib": "node examples/signup.with-lib.js",
+    "example:signup:nolib": "node examples/signup.no-lib.js",
     "prepublishOnly": "npm run build",
     "test": "vitest"
   },
@@ -20,7 +23,7 @@
     "dist"
   ],
   "dependencies": {
-    "errgroup": "^0.1.1",
+    "errgroup": "^0.1.3",
     "go-like-ctx": "^0.1.1"
   },
   "devDependencies": {
