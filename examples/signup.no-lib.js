@@ -48,6 +48,7 @@ async function signup(input) {
     console.error("[signup] failed", firstErr.message);
     return { ok: false, error: firstErr };
   }
+
   console.log("[signup] done");
   return { ok: true, user };
 }
@@ -124,10 +125,8 @@ function maybeFail(task) {
 async function fetchWithAbort(signal, url) {
   const controller = new AbortController();
   signal.addEventListener("abort", () => controller.abort(), { once: true });
-  try {
-    const res = await fetch(url, { signal: controller.signal });
-    await res.text();
-  } finally {}
+  const res = await fetch(url, { signal: controller.signal });
+  await res.text();
 }
 
 var result = await signup({
